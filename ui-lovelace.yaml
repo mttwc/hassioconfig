@@ -1,0 +1,50 @@
+title: My Awesome Home
+# Include external resources
+resources:
+  - url: /local/my-custom-card.js
+    type: js
+  - url: /local/my-webfont.css
+    type: css
+
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+# background: center / cover no-repeat url("/background.png") fixed
+# Exclude entities from "Unused entities" view
+excluded_entities:
+  - weblink.router
+views:
+    # View tab title.
+  - title: Example
+    # Optional unique id for direct access /lovelace/${id}
+    id: example
+    # Optional background (overwrites the global background).
+    # background: radial-gradient(crimson, skyblue)
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Bathroom
+            show_header_toggle: false
+            entities:
+              - name: Floor Heating
+                entity: switch.zooz_unknown_type2500_id2500_switch_7
+
+          - type: weather-forecast
+            entity: weather.dark_sky 
+
+          - type: iframe
+            url: https://embed.windy.com/embed2.html?lat=47.588&lon=-122.201&zoom=9&level=surface&overlay=wind&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&detailLat=47.614&detailLon=-122.133&metricWind=default&metricTemp=default&radarRange=-1
+            aspect_ratio: 50%
+
+    # Specify a tab icon if you want the view tab to be an icon.
+  - icon: mdi:home-assistant
+    # Title of the view. Will be used as the tooltip for tab icon
+    title: Second view
+    cards:
+        # The markdown card will render markdown text.
+      - type: markdown
+        title: Lovelace
+        content: >
+          Welcome to your **Lovelace UI**.
