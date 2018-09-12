@@ -25,7 +25,7 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
+  api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: https://59c792eb-d182-499d-aa66-405401401ec3.duckdns.org:8123
   ssl_certificate: /ssl/fullchain.pem
@@ -80,11 +80,16 @@ zha:
   database_path: /config/zigbee.db
 
 panel_iframe:
+  nodered:
+    title: Node-RED Flows
+    icon: mdi:nodejs
+    url: https://59c792eb-d182-499d-aa66-405401401ec3.duckdns.org:1880
+
   configurator:
     title: Configurator
     icon: mdi:wrench
     url: https://59c792eb-d182-499d-aa66-405401401ec3.duckdns.org:3218
-    
+
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
