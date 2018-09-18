@@ -13,3 +13,8 @@ switch.zooz_unknown_type2500_id2500_switch_7:
 switch.zooz_unknown_type2500_id2500_switch_8:
   friendly_name: Garage Dual Z-Wave Plug - Right
   node_id: 2
+switch.inovelli_nzw30s_onoff_switchscene_switch:
+  friendly_name: Front Door Light On/Off Switch
+zwave.inovelli_nzw30s_onoff_switchscene:
+  friendly_name: Front Door Light On/Off Switch
+  node_name: Front Door Light On/Off Switch
