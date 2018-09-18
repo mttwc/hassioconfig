@@ -30,6 +30,13 @@ views:
             entities:
               - name: Floor Heating
                 entity: switch.zooz_unknown_type2500_id2500_switch_7
+                
+          - type: entities
+            title: Outdoor Lights
+            show_header_toggle: false
+            entities:
+              - name: Front
+                entity: switch.inovelli_nzw30s_onoff_switchscene_switch
 
           - type: weather-forecast
             entity: weather.dark_sky 
