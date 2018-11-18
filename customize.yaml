@@ -1,5 +1,6 @@
 zwave.zooz_unknown_type2500_id2500_3:
   friendly_name: Garage Dual Z-Wave Plug - Device
+  is_ready: true
   manufacturer_name: Inovelli
   node_id: 2
   node_name: Garage Dual Z-Wave Plug - Device

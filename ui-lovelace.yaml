@@ -44,6 +44,10 @@ views:
           - type: iframe
             url: https://embed.windy.com/embed2.html?lat=47.588&lon=-122.201&zoom=9&level=surface&overlay=wind&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&detailLat=47.614&detailLon=-122.133&metricWind=default&metricTemp=default&radarRange=-1
             aspect_ratio: 50%
+      - type: vertical-stack
+        cards:
+          - type: thermostat
+            entity: climate.ecobee4
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:home-assistant
