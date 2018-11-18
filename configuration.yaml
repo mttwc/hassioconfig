@@ -95,4 +95,4 @@ weather:
     api_key: !secret darksky_api_key
 
 ecobee:
-  api_key: IrkHlZqtfglXdXqdQwwBlUHKAjrMVoSY 
+  api_key: !secret ecobee_api_key
