@@ -19,3 +19,6 @@ switch.inovelli_nzw30s_onoff_switchscene_switch:
 zwave.inovelli_nzw30s_onoff_switchscene:
   friendly_name: Front Door Light On/Off Switch
   node_name: Front Door Light On/Off Switch
+zwave.dome_leak_sensor:
+  friendly_name: Washing Machine Leak Sensor
+  node_name: Washing Machine Leak Sensor
