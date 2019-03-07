@@ -27,7 +27,7 @@ http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: https://59c792eb-d182-499d-aa66-405401401ec3.duckdns.org:8123
+  base_url: 59c792eb-d182-499d-aa66-405401401ec3.duckdns.org:8123
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
 
@@ -97,3 +97,14 @@ weather:
 
 ecobee:
   api_key: !secret ecobee_api_key
+
+# Join
+notify:
+  - platform: joaoapps_join
+    api_key: !secret join_api_key
+    device_id: group.all
+    name: Join
+joaoapps_join:
+  - name: All Devices
+    device_id: group.all
+    api_key: !secret join_api_key
