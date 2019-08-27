@@ -13,12 +13,6 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
-panel_iframe:
-  pihole:
-    title: Pi-hole
-    icon: mdi:block-helper
-    url: https://59c792eb-d182-499d-aa66-405401401ec3.duckdns.org:4865
-
 # Enables the frontend
 frontend:
   themes: !include themes.yaml
