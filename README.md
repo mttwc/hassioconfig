@@ -75,7 +75,7 @@ sudo su
 
 add-apt-repository universe
 
-apt-get isntall bash jq curl avahi-daemon dbus software-properties-common apparmor-utils apt-transport-https ca-certificates network-manager socat
+apt-get install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils apt-transport-https ca-certificates network-manager socat
 
 systemctl disable ModemManager
 systemctl stop ModemManager
@@ -92,6 +92,23 @@ curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/m
 ### Notes
 
 - Do not enable firewall and ssf with `ufw`, as you can access the HA CLI through Portainer remotely. The firewall instructions in the medium article will disable connections to http://supervisor/core, and incoming remote connections, making DuckDNS and many add-ons break.
+
+- If you are planning on using AdGuard Home or some other DNS ad-blocker, you will need to disable `systemd-resolved` and `dnsmasq` to free up port 53:
+
+```bash
+# Disable and stop systemd-resolved service
+sudo systemctl disable systemd-resolved.service
+sudo systemctl stop systemd-resolved
+
+sudo su
+vi /etc/NetworkManager/NetworkManager.conf
+# Comment out `dns=dnsmasq` line with `#`
+
+# --REBOOT--
+
+# You should see this as cleared now, or used by Adguard if you've installed that add-on already
+sudo lsof -i :53
+```
 
 ## Troubleshooting
 
