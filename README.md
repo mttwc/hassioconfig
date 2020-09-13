@@ -110,6 +110,11 @@ vi /etc/NetworkManager/NetworkManager.conf
 sudo lsof -i :53
 ```
 
+- If you are planning on using Node-RED, connections to Home Assistant entities will likely fail unless you do the following:
+    - In Node-RED, click any node
+    - Hit the `Edit` button next to the `Server` dropdown
+    - Uncheck `Delay connection attempts`
+
 ## Troubleshooting
 
 ### Getting systemd logs
