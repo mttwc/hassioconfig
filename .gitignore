@@ -54,3 +54,4 @@ ftvconfig.yaml
 groups.yaml
 automations.yaml
 entity_registry.yaml
+.shopping_list.json

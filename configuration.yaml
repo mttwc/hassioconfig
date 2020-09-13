@@ -45,6 +45,9 @@ tts:
 # Cloud
 cloud:
 
+# Shopping list
+shopping_list:
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -74,3 +77,12 @@ joaoapps_join:
   - name: All Devices
     device_id: group.all
     api_key: !secret join_api_key
+
+influxdb:
+  host: a0d7b954-influxdb
+  port: 8086
+  database: homeassistant
+  username: homeassistant
+  password: !secret influxdb_password
+  max_retries: 3
+  default_measurement: state
