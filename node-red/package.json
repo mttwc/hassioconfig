@@ -3,5 +3,7 @@
     "description": "A Node-RED Project",
     "version": "0.0.1",
     "private": true,
-    "dependencies": {}
+    "dependencies": {
+        "node-red-contrib-join-joaoapps": "~1.1.3"
+    }
 }
